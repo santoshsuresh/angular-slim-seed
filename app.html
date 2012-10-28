@@ -3,10 +3,52 @@
 <html>
 <head>
     <title>Angular Slim Bootstrap Seed Project</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body ng-app="angular-app">
+<div ng-controller="AppController">
 
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">{{appName}}<sup>[beta]</sup></a>
+                <div class="nav-collapse collapse" style="height: 0px;">
+                <ul class="nav">
+                    <li ng-class="activeClass('menu1')"><a href="#/menu1">Menu 1</a></li>
+                    <li ng-class="activeClass('menu2')"><a href="#/menu2">Menu 2</a></li>
+                </ul>
+                    <ul class="nav pull-right">
+                        <li ><a href="#/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div ng-view></div>
+        </div>
+        <div class="row" id="alert-area">
+        </div>
+
+    </div>
+
+
+</div>
 </body>
 
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/app/module.js"></script>
+<script type="text/javascript" src="js/app/controller.js"></script>
 </html>
