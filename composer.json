@@ -1,6 +1,7 @@
 {
     "require": {
         "slim/slim": "2.*",
-        "phpunit/phpunit": "3.7.7"
+        "phpunit/phpunit": "3.7.7",
+        "doctrine/orm": "*"
     }
 }
